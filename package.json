@@ -1,6 +1,22 @@
 {
+  "name": "ArtistehubServer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+   
+    "lint": "next lint"
+  },
   "dependencies": {
+   
     "express": "^4.19.2",
-    "socket.io": "^4.7.5"
+
+    "socket.io": "^4.7.5",
+    
+  },
+  "devDependencies": {
+    "encoding": "^0.1.13"
   }
 }
