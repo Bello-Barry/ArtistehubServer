@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "npm install && npm run build",
+    "build": "npm run build",
     "start": "NODE_ENV=production node server.js",
-    "lint": "next lint"
+   
   },
   "dependencies": {
     "express": "^4.19.2",
