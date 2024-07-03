@@ -10,11 +10,10 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*',
-    methods: ['GET', 'POST','PUT','DELETE'],
+    origin: 'https://artistehub.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
   },
 });
-
 
 // Connect to MongoDB
 connectToDB();
@@ -25,10 +24,12 @@ app.use(express.json());
 // Routes for posts
 app.use('/api/posts', postRoutes);
 
+// Default route for root
+app.get('/', (req, res) => {
+  res.send('Bienvenue sur ArtisteHub Server!');
+});
+
 // Socket.IO events
-
-
-
 io.on('connection', (socket) => {
   console.log('a user connected');
 
