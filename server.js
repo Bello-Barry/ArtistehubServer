@@ -10,12 +10,12 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'https://artistehub.vercel.app',
+    origin: '*',
     methods: ['GET', 'POST','PUT','DELETE'],
   },
 });
 
-<<<<<<< HEAD
+
 // Connect to MongoDB
 connectToDB();
 
@@ -26,9 +26,9 @@ app.use(express.json());
 app.use('/api/posts', postRoutes);
 
 // Socket.IO events
-=======
 
->>>>>>> origin/main
+
+
 io.on('connection', (socket) => {
   console.log('a user connected');
 
