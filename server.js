@@ -11,9 +11,6 @@ const io = new Server(server, {
   },
 });
 
-app.get('/post/PostView', (req, res) => {
-  res.send('Socket.IO server is running');
-});
 
 io.on('connection', (socket) => {
   console.log('a user connected');
